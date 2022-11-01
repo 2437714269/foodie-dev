@@ -1,17 +1,13 @@
 package com.acer.mapper;
 
-import com.acer.model.Users;
+import com.acer.pojo.Users;
+import org.apache.ibatis.annotations.Select;
 
-public interface UsersMapper {
-    int deleteByPrimaryKey(String id);
 
-    int insert(Users record);
+public interface UsersMapper{
 
-    int insertSelective(Users record);
 
-    Users selectByPrimaryKey(String id);
+	@Select("select * from users where username = #{username}")
+	public Users save(String username);
 
-    int updateByPrimaryKeySelective(Users record);
-
-    int updateByPrimaryKey(Users record);
 }

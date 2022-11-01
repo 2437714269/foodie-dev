@@ -1,4 +1,4 @@
-package com.acer.model;
+package com.acer.pojo;
 
 import java.util.Date;
 
